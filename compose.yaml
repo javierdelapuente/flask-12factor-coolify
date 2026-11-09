@@ -23,6 +23,7 @@ services:
     environment:
       PORT: "5000"
       POSTGRESQL_DB_CONNECT_STRING: postgresql://${SERVICE_USER_POSTGRES}:${SERVICE_PASSWORD_64_POSTGRES}@db:5432/visitors
+      SERVICE_URL_WEB: /
     depends_on:
       db:
         condition: service_healthy
